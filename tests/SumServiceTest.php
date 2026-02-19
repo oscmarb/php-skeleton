@@ -9,9 +9,16 @@ use PHPUnit\Framework\TestCase;
 
 class SumServiceTest extends TestCase
 {
+    private SumService $sumService;
+
+    protected function setUp(): void
+    {
+        $this->sumService = new SumService();
+        parent::setUp();
+    }
+
     public function test_it_sums_two_values(): void
     {
-        $sum = new SumService();
-        $this->assertSame(4, $sum->add(2, 2));
+        $this->assertSame(4, $this->sumService->add(2, 2));
     }
 }
