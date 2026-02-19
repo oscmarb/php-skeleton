@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use App\Sum;
+use App\SumService;
 use PHPUnit\Framework\TestCase;
 
-class SumTest extends TestCase
+class SumServiceTest extends TestCase
 {
     public function test_it_sums_two_values(): void
     {
-        $sum = new Sum();
+        $sum = new SumService();
         $this->assertSame(4, $sum->add(2, 2));
     }
 }

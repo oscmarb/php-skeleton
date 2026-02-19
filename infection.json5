@@ -1,0 +1,16 @@
+{
+    "$schema": "vendor/infection/infection/resources/schema.json",
+    "source": {
+        "directories": [
+            "src"
+        ]
+    },
+    "phpUnit": {
+        "configDir": "."
+    },
+    "initialTestsPhpOptions": "-d xdebug.mode=coverage",
+    "timeout": 0.5,
+    "mutators": {
+        "@default": true
+    }
+}
